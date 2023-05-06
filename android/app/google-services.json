@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "199170876897",
+    "project_id": "avegen-4262a",
+    "storage_bucket": "avegen-4262a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199170876897:android:16ddc30eadce4dd035dea0",
+        "android_client_info": {
+          "package_name": "com.avegen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199170876897-0a9b6t468bos0m28dhl0bk4h7di21rq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avegen",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "199170876897-sak16inbof7hbktg74tor4hsmhjl9aub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSpUicZUhgb9nVDf5DB0RJ35labt-3Y-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199170876897-sak16inbof7hbktg74tor4hsmhjl9aub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
