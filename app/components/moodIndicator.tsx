@@ -24,7 +24,7 @@ const MoodIndicator = (props: IMoodIndicatorProps) => {
           resizeMode="contain"
           source={item.icon}
         />
-        <Text>{item.title}</Text>
+        <Text style={{color: 'black'}}>{item.title}</Text>
       </TouchableOpacity>
     );
   };

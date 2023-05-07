@@ -9,6 +9,10 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  titleText: {
+    marginLeft: 10,
+    color: 'black',
+  },
   BPText: {
     color: 'black',
     textAlign: 'center',
@@ -71,6 +75,7 @@ export const styles = StyleSheet.create({
     borderColor: 'grey',
     borderRadius: 6,
     paddingHorizontal: 5,
+    color: 'black',
   },
   BPContainer: {
     flex: 1,

@@ -9,7 +9,7 @@ export const images = {
 export const Constants = {
   Home: 'Home',
   Trackers: 'Trackers',
-  Login: 'login',
+  Login: 'Login',
   mobile: 'mobile',
   Moods: [
     {title: 'Very Unhappy', icon: images.veryUnhappy},

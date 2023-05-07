@@ -13,7 +13,7 @@ const Logout = () => {
 
   return (
     <TouchableOpacity onPress={logout}>
-      <Text>Logout</Text>
+      <Text style={{color: 'black'}}>Logout</Text>
     </TouchableOpacity>
   );
 };

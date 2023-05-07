@@ -13,9 +13,10 @@ const BPInput = (props: IBPInputProps) => {
   const {title, onChangeText, value, disabled} = props;
   return (
     <View style={styles.BPContainer}>
-      <Text style={{marginLeft: 10}}>{title}</Text>
+      <Text style={styles.titleText}>{title}</Text>
       <TextInput
         style={styles.input}
+        placeholderTextColor={'grey'}
         placeholder={title}
         value={value}
         editable={!disabled}
