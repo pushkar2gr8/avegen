@@ -1,5 +1,3 @@
-import isEmpty from 'lodash/isEmpty';
-
 const today = new Date().toISOString().split('T')[0];
 const fastDate = getPastDate(3);
 const futureDates = getFutureDates(12);
@@ -28,10 +26,13 @@ function getPastDate(numberOfDays: number) {
 
 export const agendaItems = [
   {
+    id: 1,
     title: dates[0],
+    marked: true,
     data: [{hour: '12am', duration: '1h', title: 'First Yoga'}],
   },
   {
+    id: 2,
     title: dates[1],
     data: [
       {hour: '4pm', duration: '1h', title: 'Pilates ABC'},
@@ -39,6 +40,7 @@ export const agendaItems = [
     ],
   },
   {
+    id: 3,
     title: dates[2],
     data: [
       {hour: '1pm', duration: '1h', title: 'Ashtanga Yoga'},
@@ -47,78 +49,21 @@ export const agendaItems = [
     ],
   },
   {
+    id: 4,
     title: dates[3],
     data: [{hour: '12am', duration: '1h', title: 'Ashtanga Yoga'}],
   },
-  {
-    title: dates[4],
-    data: [{}],
-  },
-  {
-    title: dates[5],
-    data: [
-      {hour: '9pm', duration: '1h', title: 'Middle Yoga'},
-      {hour: '10pm', duration: '1h', title: 'Ashtanga'},
-      {hour: '11pm', duration: '1h', title: 'TRX'},
-      {hour: '12pm', duration: '1h', title: 'Running Group'},
-    ],
-  },
-  {
-    title: dates[6],
-    data: [{hour: '12am', duration: '1h', title: 'Ashtanga Yoga'}],
-  },
-  {
-    title: dates[7],
-    data: [{}],
-  },
-  {
-    title: dates[8],
-    data: [
-      {hour: '9pm', duration: '1h', title: 'Pilates Reformer'},
-      {hour: '10pm', duration: '1h', title: 'Ashtanga'},
-      {hour: '11pm', duration: '1h', title: 'TRX'},
-      {hour: '12pm', duration: '1h', title: 'Running Group'},
-    ],
-  },
-  {
-    title: dates[9],
-    data: [
-      {hour: '1pm', duration: '1h', title: 'Ashtanga Yoga'},
-      {hour: '2pm', duration: '1h', title: 'Deep Stretches'},
-      {hour: '3pm', duration: '1h', title: 'Private Yoga'},
-    ],
-  },
-  {
-    title: dates[10],
-    data: [{hour: '12am', duration: '1h', title: 'Last Yoga'}],
-  },
-  {
-    title: dates[11],
-    data: [
-      {hour: '1pm', duration: '1h', title: 'Ashtanga Yoga'},
-      {hour: '2pm', duration: '1h', title: 'Deep Stretches'},
-      {hour: '3pm', duration: '1h', title: 'Private Yoga'},
-    ],
-  },
-  {
-    title: dates[12],
-    data: [{hour: '12am', duration: '1h', title: 'Last Yoga'}],
-  },
-  {
-    title: dates[13],
-    data: [{hour: '12am', duration: '1h', title: 'Last Yoga'}],
-  },
 ];
 
-export function getMarkedDates() {
+export function getMarkedDates(trackers: any) {
   const marked: any = {};
 
-  agendaItems.forEach(item => {
+  trackers.forEach((item: any) => {
     // NOTE: only mark dates with data
-    if (item.data && item.data.length > 0 && !isEmpty(item.data[0])) {
+    if (item?.marked && item?.data?.length > 0) {
       marked[item.title] = {marked: true};
     } else {
-      marked[item.title] = {disabled: true};
+      marked[item.title] = {marked: false};
     }
   });
   return marked;
